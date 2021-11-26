@@ -27,17 +27,3 @@ for i in range(int(np.mean(data40)),int(np.mean(data120))):
     h.append(np.polyval(p,i))
 plt.plot(h,adclist)
 plt.show()
-
-
-waveData, duration, count = wave.readWaveData(path + 'wave.txt')
-
-t = np.linspace(0, duration, count)
-
-plt.plot(t, np.polyval(p, waveData))
-plt.title('Зависимость уровня воды от времени')
-plt.ylabel(u'h, mm')
-plt.xlabel(u't, с')
-plt.minorticks_on()
-plt.grid(which = "major", linewidth = 1)
-plt.grid(which = "minor", linestyle = '--', linewidth = 0.5)
-plt.show()
